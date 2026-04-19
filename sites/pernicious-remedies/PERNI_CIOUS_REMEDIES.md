@@ -212,14 +212,14 @@ no medical credentials...
 
 Suggested first SKUs:
 
-1. **Dr. Finchley's Nerve Restorative** — 8oz amber, cork — $24
-2. **Madame Périgord's Sleepless Remedy** — 4oz amber dropper — $18
-3. **Brimstone Bitters** — 8oz clear with cork — $22
-4. **The Widow's Tonic** — 8oz cobalt blue, cork — $28
+1. **Dr. Flinchley's Nerve Restorative** — 8oz amber, cork — $24
+2. **Madame Périgord's Sarcastic Remedy** — 4oz amber dropper — $18
+3. **Truthful Bitters** — 8oz clear with cork — $22
+4. **Tempis Fugit Tonic** — 8oz cobalt blue, cork — $28
 5. **Anxiety, Bottled.** — 4oz amber straight-sided jar — $18
 6. **Unsolicited Opinions Suppressant** — 8oz amber, cork — $24
-7. **Monday Morning Antidote** — 4oz clear dropper — $16
-8. **The Curate's Patience** — 8oz amber, cork — $24
+7. **Monday Mourning Antidote** — 4oz clear dropper — $16
+8. **Tablets for Patience Deficiency** — 8oz amber, cork — $24
 
 Collections:
 - **Victorian Apothecary** (items 1–4)

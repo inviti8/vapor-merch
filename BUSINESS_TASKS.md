@@ -1,6 +1,6 @@
 # Business Tasks — First Site Launch
 
-Tracks everything needed to go from zero → first sale of **Perni Cious Remedies**.
+Tracks everything needed to go from zero → first sale of **Pernici Ously Remedies**.
 Organized by domain. Items marked **[site]** apply only to this one brand; items marked
 **[company]** serve every future brand under `sites/*`. Cost + time estimates are ballpark.
 
@@ -12,7 +12,7 @@ Do this FIRST — it unlocks the bank account, sales tax permit, and Stripe live
 
 - [ ] **Choose LLC state.** Home state is simplest unless you have a reason otherwise. Wyoming / Delaware cost more and only pay off at significant scale. *(15 min research)*
 - [ ] **Form LLC.** DIY via your state's Secretary of State website, or use [Northwest Registered Agent](https://www.northwestregisteredagent.com/) (~$39 + state fee). *($50–$300, 1–5 business days)*
-- [ ] **Parent company name decision.** Is the LLC "Perni Cious Remedies LLC" or an umbrella like "Vapor Merch LLC" / "[Your Name] Studio LLC"? Recommend umbrella — every future brand files as a DBA under it, one LLC fee instead of N. *(decide before filing)*
+- [ ] **Parent company name decision.** Is the LLC "Pernici Ously Remedies LLC" or an umbrella like "Vapor Merch LLC" / "[Your Name] Studio LLC"? Recommend umbrella — every future brand files as a DBA under it, one LLC fee instead of N. *(decide before filing)*
 - [ ] **Get EIN.** Free at [IRS.gov EIN assistant](https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online). Takes 10 minutes; issued immediately. *($0)*
 - [ ] **Register DBA** ("Perni Cious Remedies" as a trade name of the umbrella LLC). State or county filing. *($10–$100)*
 - [ ] **Open business bank account.** [Mercury](https://mercury.com) (free, online-only, great for ecom) or [Relay](https://relayfi.com). Avoid brick-and-mortar banks for this. *(1–3 business days)*
@@ -128,7 +128,7 @@ Current launch SKUs from `PERNI_CIOUS_REMEDIES.md` §5. For each one:
 | # | SKU | Stripe ✓ | Copy ✓ | Photo ✓ | MDX ✓ |
 |---|---|---|---|---|---|
 | 1 | Dr. Flinchley's Nerve Restorative — $24 | [ ] | [x] | [ ] | [x] |
-| 2 | Madame Périgord's Sleepless Remedy — $18 | [ ] | [x] | [ ] | [x] |
+| 2 | Madame Périgord's Sarcastic Remedy — $18 | [ ] | [x] | [ ] | [x] |
 | 3 | Truthful Bitters — $22 | [ ] | [ ] | [ ] | [ ] |
 | 4 | Tempis Fugit Tonic — $28 | [ ] | [ ] | [ ] | [ ] |
 | 5 | Anxiety, Bottled. — $18 | [ ] | [ ] | [ ] | [ ] |
