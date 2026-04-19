@@ -1,0 +1,23 @@
+---
+import Base from '~/layouts/Base.astro';
+---
+
+<Base title="Wholesale">
+  <section class="max-w-2xl mx-auto px-6 py-16">
+    <p class="eyebrow text-center">For the Trade</p>
+    <h1 class="text-center mt-2">Wholesale Inquiries</h1>
+    <hr class="rule" />
+    <p class="italic text-[color:var(--color-bone-dim)] text-center">
+      We work with oddities shops, alternative boutiques, speakeasy bars,
+      and seasonal Halloween retailers. Minimum order: 12 units mixed.
+    </p>
+
+    <form action="https://formspree.io/f/REPLACE_ME" method="POST" class="mt-10 space-y-4">
+      <input name="business" placeholder="Business name" required class="w-full bg-transparent border border-[color:var(--color-gilt-aged)] px-3 py-2" />
+      <input name="email" type="email" placeholder="Email" required class="w-full bg-transparent border border-[color:var(--color-gilt-aged)] px-3 py-2" />
+      <input name="website" placeholder="Website (optional)" class="w-full bg-transparent border border-[color:var(--color-gilt-aged)] px-3 py-2" />
+      <textarea name="notes" rows="5" placeholder="Tell us about your shop and what interests you." class="w-full bg-transparent border border-[color:var(--color-gilt-aged)] px-3 py-2"></textarea>
+      <button class="btn btn-primary w-full">Send Inquiry</button>
+    </form>
+  </section>
+</Base>

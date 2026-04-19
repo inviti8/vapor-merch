@@ -1,0 +1,32 @@
+---
+import Base from '~/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('journal', (e) => !e.data.draft))
+  .sort((a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf());
+---
+
+<Base title="The Journal">
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <p class="eyebrow text-center">Field Notes</p>
+    <h1 class="text-center mt-2">The Journal</h1>
+    <p class="text-center mt-4 italic text-[color:var(--color-bone-dim)]">
+      Dispatches from the studio. Seasonal releases, behind-the-scenes,
+      and the occasional harmless slander.
+    </p>
+    <hr class="rule" />
+
+    <ul class="space-y-10">
+      {entries.map((e) => (
+        <li>
+          <p class="eyebrow">{e.data.publishedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <a href={`/journal/${e.id}`} class="no-underline">
+            <h2 class="mt-1 hover:text-[color:var(--color-gilt)] transition-colors">{e.data.title}</h2>
+          </a>
+          <p class="mt-2 italic text-[color:var(--color-bone-dim)]">{e.data.excerpt}</p>
+          <a href={`/journal/${e.id}`} class="eyebrow inline-block mt-3">Read on →</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

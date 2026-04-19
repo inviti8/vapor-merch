@@ -1,0 +1,54 @@
+---
+const links = [
+  { href: '/shop', label: 'Shop' },
+  { href: '/collections', label: 'Collections' },
+  { href: '/journal', label: 'Journal' },
+  { href: '/about', label: 'About' },
+  { href: '/faq', label: 'FAQ' },
+];
+---
+
+<header class="border-b border-[color:var(--color-gilt-aged)]/30 sticky top-0 z-40 backdrop-blur-sm bg-[color:var(--color-ink)]/85">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="/" class="no-underline flex items-baseline gap-2">
+      <span class="font-[family-name:var(--font-display)] text-2xl tracking-wide text-[color:var(--color-bone)]">
+        Perni<span class="text-[color:var(--color-gilt)]"> Cious </span>Remedies
+      </span>
+    </a>
+
+    <ul class="hidden md:flex gap-8 items-center">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="font-[family-name:var(--font-mono)] text-xs tracking-[0.2em] uppercase no-underline text-[color:var(--color-bone-dim)] hover:text-[color:var(--color-gilt)]"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <button
+      id="cart-toggle"
+      class="font-[family-name:var(--font-mono)] text-xs tracking-[0.2em] uppercase border border-[color:var(--color-gilt-aged)] px-4 py-2 hover:bg-[color:var(--color-oxblood)] hover:border-[color:var(--color-oxblood)] transition-colors"
+      aria-label="Open cart"
+    >
+      Cart <span id="cart-count" class="ml-1 text-[color:var(--color-gilt)]">(0)</span>
+    </button>
+  </nav>
+</header>
+
+<script>
+  import { cart } from '~/lib/cart';
+
+  const countEl = document.getElementById('cart-count');
+  cart.subscribe((items) => {
+    const total = items.reduce((sum, item) => sum + item.quantity, 0);
+    if (countEl) countEl.textContent = `(${total})`;
+  });
+
+  document.getElementById('cart-toggle')?.addEventListener('click', () => {
+    window.dispatchEvent(new CustomEvent('cart:open'));
+  });
+</script>

@@ -1,0 +1,56 @@
+---
+import Base from '~/layouts/Base.astro';
+import ProductCard from '~/components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProducts = await getCollection('products', (p) => p.data.inStock);
+const featured = allProducts.slice(0, 4);
+---
+
+<Base title="Remedies of Dubious Provenance">
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-24 text-center">
+    <p class="eyebrow">Est. 1897 · Compounded today</p>
+    <h1 class="mt-4 font-[family-name:var(--font-blackletter)] text-5xl md:text-7xl">
+      Perni Cious Remedies
+    </h1>
+    <p class="mt-6 max-w-2xl mx-auto italic text-[color:var(--color-bone-dim)] text-lg">
+      Hand-printed decorative apothecary bottles for the melancholic collector,
+      the theatrical host, and the unserious occultist. Subtle harm, tasteful packaging.
+    </p>
+    <div class="mt-8 flex gap-4 justify-center">
+      <a href="/shop" class="btn btn-primary">Browse the Cabinet</a>
+      <a href="/about" class="btn">Our Dubious Story</a>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="flex items-baseline justify-between">
+      <h2>The Cabinet</h2>
+      <a href="/shop" class="eyebrow">View all remedies →</a>
+    </div>
+    <hr class="rule" />
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+      {featured.map((p) => (
+        <ProductCard
+          slug={p.id}
+          name={p.data.name}
+          vintageDate={p.data.vintageDate}
+          priceUsd={p.data.priceUsd}
+          primaryImage={p.data.primaryImage}
+        />
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 py-24 text-center">
+    <div class="label-frame">
+      <p class="eyebrow">A Word From the Proprietor</p>
+      <p class="mt-4 font-[family-name:var(--font-display)] text-2xl italic leading-relaxed">
+        "Every bottle is empty, every label is earnest, and every claim is
+        thoroughly unverified. Results uncommon. Side effects probable.
+        Not for consumption. Not for decision-making. Not for courts of law."
+      </p>
+      <p class="eyebrow mt-6">— The Apothecary</p>
+    </div>
+  </section>
+</Base>

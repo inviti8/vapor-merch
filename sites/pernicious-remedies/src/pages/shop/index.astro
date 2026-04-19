@@ -1,0 +1,32 @@
+---
+import Base from '~/layouts/Base.astro';
+import ProductCard from '~/components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+
+const products = await getCollection('products', (p) => p.data.inStock);
+---
+
+<Base title="All Remedies">
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-8 text-center">
+    <p class="eyebrow">The Full Cabinet</p>
+    <h1 class="mt-2">All Remedies</h1>
+    <p class="mt-4 max-w-xl mx-auto italic text-[color:var(--color-bone-dim)]">
+      Every bottle, every fraudulent tonic, every ill-advised remedy.
+      Arrange them on a shelf and pretend you are a Victorian with problems.
+    </p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 pb-24">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {products.map((p) => (
+        <ProductCard
+          slug={p.id}
+          name={p.data.name}
+          vintageDate={p.data.vintageDate}
+          priceUsd={p.data.priceUsd}
+          primaryImage={p.data.primaryImage}
+        />
+      ))}
+    </div>
+  </section>
+</Base>

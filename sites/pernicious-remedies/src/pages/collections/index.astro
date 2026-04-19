@@ -1,0 +1,24 @@
+---
+import Base from '~/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const collections = (await getCollection('collections')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="Collections">
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <p class="eyebrow text-center">Curated</p>
+    <h1 class="text-center mt-2">Collections</h1>
+    <hr class="rule" />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      {collections.map((c) => (
+        <a href={`/collections/${c.id}`} class="block group no-underline label-frame">
+          <h2 class="group-hover:text-[color:var(--color-gilt)] transition-colors">{c.data.name}</h2>
+          <p class="mt-3 italic text-[color:var(--color-bone-dim)]">{c.data.description}</p>
+          <p class="eyebrow mt-4">Browse →</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

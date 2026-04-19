@@ -1,0 +1,21 @@
+---
+import Base from '~/layouts/Base.astro';
+---
+
+<Base title="Thank You">
+  <section class="max-w-2xl mx-auto px-6 py-24 text-center">
+    <p class="eyebrow">The Deed is Done</p>
+    <h1 class="mt-2">Your Package Approaches</h1>
+    <hr class="rule" />
+    <p class="text-lg italic text-[color:var(--color-bone-dim)]">
+      A confirmation has been dispatched by ordinary post (email). Your bottles will ship
+      within three business days, sealed, wrapped, and entirely without therapeutic effect.
+    </p>
+    <a href="/shop" class="btn mt-8">Return to the Cabinet</a>
+  </section>
+</Base>
+
+<script>
+  import { clearCart } from '~/lib/cart';
+  clearCart();
+</script>

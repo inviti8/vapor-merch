@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bone: #ece5d3;
+  --color-bone-dim: #d9cfb7;
+  --color-ink: #14110f;
+  --color-ink-soft: #2a2622;
+  --color-oxblood: #5c1a1b;
+  --color-oxblood-deep: #3d1011;
+  --color-amber-glass: #8b5a2b;
+  --color-verdigris: #3e5c52;
+  --color-gilt: #b8892c;
+  --color-gilt-aged: #8c6620;
+
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --font-blackletter: "UnifrakturMaguntia", "Cormorant Garamond", serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-mono: "IM Fell English", "IM Fell DW Pica", Georgia, serif;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: local("Cormorant Garamond");
+}
+
+html {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(184, 137, 44, 0.04), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(92, 26, 27, 0.06), transparent 40%),
+    var(--color-ink);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--color-bone);
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.1; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.15; }
+h3 { font-size: 1.4rem; }
+
+a {
+  color: var(--color-gilt);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  transition: color 150ms ease;
+}
+
+a:hover { color: var(--color-bone); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gilt-aged);
+}
+
+.rule {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gilt-aged) 20%,
+    var(--color-gilt-aged) 80%,
+    transparent
+  );
+  margin: 2rem 0;
+}
+
+.wax-seal {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--color-oxblood), var(--color-oxblood-deep));
+  box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4);
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--color-gilt-aged);
+  background: transparent;
+  color: var(--color-bone);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.btn:hover {
+  background: var(--color-oxblood);
+  border-color: var(--color-oxblood);
+  color: var(--color-bone);
+}
+
+.btn-primary {
+  background: var(--color-oxblood);
+  border-color: var(--color-oxblood);
+}
+
+.btn-primary:hover {
+  background: var(--color-oxblood-deep);
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-gilt);
+}
+
+.label-frame {
+  border: 1px solid var(--color-gilt-aged);
+  padding: 2rem;
+  position: relative;
+  background: rgba(236, 229, 211, 0.02);
+}
+
+.label-frame::before,
+.label-frame::after {
+  content: "✦";
+  position: absolute;
+  color: var(--color-gilt-aged);
+  font-size: 0.75rem;
+}
+
+.label-frame::before { top: -0.5rem; left: 50%; transform: translateX(-50%); background: var(--color-ink); padding: 0 0.5rem; }
+.label-frame::after { bottom: -0.5rem; left: 50%; transform: translateX(-50%); background: var(--color-ink); padding: 0 0.5rem; }

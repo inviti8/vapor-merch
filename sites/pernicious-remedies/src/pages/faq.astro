@@ -1,0 +1,51 @@
+---
+import Base from '~/layouts/Base.astro';
+
+const faqs = [
+  {
+    q: 'Is any of this real medicine?',
+    a: 'Emphatically no. Every bottle ships empty and is sold as decorative art. Please do not drink, ingest, apply, or consult a bottle for medical purposes. Consult a physician for medical purposes.',
+  },
+  {
+    q: 'Are the bottles actually empty?',
+    a: 'Yes. If you want to fill them with a non-consumable substance (dried flowers, sand, candy, a tiny mystery) after you receive them, that is between you and your aesthetic.',
+  },
+  {
+    q: 'How are these printed?',
+    a: 'Direct-to-glass UV printing with archival ink. The labels do not peel, curl, or fade under normal display conditions. Do not put them in a dishwasher.',
+  },
+  {
+    q: 'How long do orders take to ship?',
+    a: 'Orders typically ship within 3 business days. Transit takes another 3–7 business days within the United States.',
+  },
+  {
+    q: 'Do you ship internationally?',
+    a: 'Not at present. We are a small operation focused on domestic US shipping while we find our feet. International shipping is planned for a future date, carved on the moon.',
+  },
+  {
+    q: 'What is your return policy?',
+    a: 'Unopened and undamaged items may be returned within 14 days for a refund minus return shipping. Custom or clearance items are final sale. See full terms for details.',
+  },
+  {
+    q: 'Do you do wholesale?',
+    a: 'Yes — oddities shops, alternative boutiques, speakeasy bars, and Halloween retailers. Email wholesale@pernicious.co for a line sheet.',
+  },
+];
+---
+
+<Base title="FAQ">
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <p class="eyebrow text-center">Frequently Alleged Questions</p>
+    <h1 class="text-center mt-2">Questions We Anticipate</h1>
+    <hr class="rule" />
+
+    <dl class="space-y-8 mt-12">
+      {faqs.map(({ q, a }) => (
+        <div>
+          <dt class="font-[family-name:var(--font-display)] text-xl text-[color:var(--color-gilt)]">{q}</dt>
+          <dd class="mt-2 text-[color:var(--color-bone-dim)]">{a}</dd>
+        </div>
+      ))}
+    </dl>
+  </article>
+</Base>
