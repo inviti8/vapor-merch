@@ -6,7 +6,7 @@ Organized by domain. Items marked **[site]** apply only to this one brand; items
 
 ---
 
-## 1. Legal & Business Entity **[company]**
+## 1. Legal & Business Entity **Vapor Merch Ltd.**
 
 Do this FIRST — it unlocks the bank account, sales tax permit, and Stripe live mode.
 
@@ -127,14 +127,14 @@ Current launch SKUs from `PERNI_CIOUS_REMEDIES.md` §5. For each one:
 
 | # | SKU | Stripe ✓ | Copy ✓ | Photo ✓ | MDX ✓ |
 |---|---|---|---|---|---|
-| 1 | Dr. Finchley's Nerve Restorative — $24 | [ ] | [x] | [ ] | [x] |
+| 1 | Dr. Flinchley's Nerve Restorative — $24 | [ ] | [x] | [ ] | [x] |
 | 2 | Madame Périgord's Sleepless Remedy — $18 | [ ] | [x] | [ ] | [x] |
-| 3 | Brimstone Bitters — $22 | [ ] | [ ] | [ ] | [ ] |
-| 4 | The Widow's Tonic — $28 | [ ] | [ ] | [ ] | [ ] |
+| 3 | Truthful Bitters — $22 | [ ] | [ ] | [ ] | [ ] |
+| 4 | Tempis Fugit Tonic — $28 | [ ] | [ ] | [ ] | [ ] |
 | 5 | Anxiety, Bottled. — $18 | [ ] | [ ] | [ ] | [ ] |
-| 6 | Unsolicited Opinions Suppressant — $24 | [ ] | [ ] | [ ] | [ ] |
-| 7 | Monday Morning Antidote — $16 | [ ] | [ ] | [ ] | [ ] |
-| 8 | The Curate's Patience — $24 | [ ] | [ ] | [ ] | [ ] |
+| 6 | Unsolicited Opinion Suppressant — $24 | [ ] | [ ] | [ ] | [ ] |
+| 7 | Monday Mourning Antidote — $16 | [ ] | [ ] | [ ] | [ ] |
+| 8 | Tablets for Patience Deficiency — $24 | [ ] | [ ] | [ ] | [ ] |
 | 9 | Bundle: The Starter Cabinet (3 pack) — $60 | [ ] | [ ] | [ ] | [ ] |
 | 10 | Bundle: The Full Pharmacopoeia (6 pack) — $120 | [ ] | [ ] | [ ] | [ ] |
 
